@@ -1,10 +1,16 @@
 import { Button } from "antd"
+import { history } from "umi"
 
-const TestPage = () => {
+const TestPage = (props) => {
+    const jumpHome = () => {
+        history.push('/')
+    }
+
+
     return (
         <div>
-            <Button type="primary">按钮</Button>
-            <h1>test index</h1>
+            <Button type="primary" onClick={jumpHome}>按钮</Button>
+            <h1>test index11223</h1>
         </div>
     );
 }
